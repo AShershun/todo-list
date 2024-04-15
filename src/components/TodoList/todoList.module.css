@@ -1,0 +1,91 @@
+.todolist_wrapper {
+    width: 50%;
+    margin: 30px auto;
+    user-select: none;
+}
+
+.todo_form {
+    margin-bottom: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.todo_form_elem {
+    border-radius: 20px;
+    margin: 5px 10px;
+}
+
+.todo_form_input {
+    font-size: 20px;
+    border: 2px solid cadetblue;
+    color: #447e81;
+    padding-left: 10px;
+    width: 85%;
+}
+
+.todo_form_input:focus {
+    color: cadetblue;
+    border: 2px solid #8dd2d5;
+}
+
+.todo_form_btn {
+    font-size: 30px;
+    padding: 0 9px;
+    background-color: cadetblue;
+    color: #ffffff;
+    border: transparent;
+}
+
+.todo_form_btn:hover {
+    background-color: #3e7577;
+}
+
+.todo_form_btn:active {
+    background-color: #4e8d8f;
+}
+
+.todo_item {
+    width: 96%;
+    background-color: cadetblue;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.todo_item:hover  {
+    background-color: #4c9174;
+}
+
+.todo_item_completed {
+    background-color: #4b973d;
+}
+
+.todo_item_text  {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.todo_item_completed .todo_item_text {
+    text-decoration: line-through;
+}
+
+.todo_item_completed:hover .todo_item_text {
+    text-decoration: none;
+}
+
+.todo_item_remove_btn {
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    font-size: 22px;
+    padding: 0 5px;
+}
+
+.todo_item_remove_btn:hover {
+    color: #bf3c3c;
+}
