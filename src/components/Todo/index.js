@@ -1,6 +1,7 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTodo, toggleComplete, removeTodo, completeAllTodos } from '../../store/slices/todoSlice';
+import {fetchTodos} from "../../store/slices/todoSlice";
 import TodoList from './TodoList';
 
 import styles from './todoList.module.css';
@@ -9,6 +10,10 @@ export default function Todo() {
     const todos = useSelector(state => state.todos.todos);
     const dispatch = useDispatch();
     const [newTodoText, setNewTodoText] = useState('');
+
+    useEffect(() => {
+        dispatch(fetchTodos());
+    }, [dispatch])
 
     const addNewTodo = () => {
         if (newTodoText.trim()) {
